@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
+  public kentang:boolean = true;
   constructor() {}
 
   toggleTheme(event){
