@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { TodoService } from '../todo.service';
+import { TodoService } from '../../todo.service';
 
 @Component({
   selector: 'app-add-new-task',
