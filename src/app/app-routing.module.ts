@@ -5,7 +5,7 @@ const routes: Routes = [
   
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'tutorial',
     pathMatch: 'full'
   },
   {
@@ -32,6 +32,11 @@ const routes: Routes = [
     path: 'rate',
     loadChildren: () => import('./pages/rate/rate.module').then( m => m.RatePageModule)
   },
+  {
+    path: 'tutorial',
+    loadChildren: () => import('./pages/tutorial/tutorial.module').then( m => m.TutorialModule)
+  },
+
 ];
 
 @NgModule({
