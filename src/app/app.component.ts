@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TabsService } from './core/tabs.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  constructor() {}
+  constructor(public tabs:TabsService) {}
 
+  // Theme Changer Code
   toggleTheme(event){
     if(event.detail.checked){
       document.body.setAttribute('color-theme', 'dark');
@@ -17,5 +19,7 @@ export class AppComponent {
 
     }
   }
+
+  // Bottom Nav Start Here
 
 }

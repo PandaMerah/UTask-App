@@ -8,6 +8,8 @@ import { TodoService } from '../../todo.service';
   styleUrls: ['./add-new-task.page.scss'],
 })
 export class AddNewTaskPage implements OnInit {
+  minDate: string = new Date().toISOString();
+  maxDate : any = (new Date()).getFullYear() + 3;
   categories= []
   categorySelectedCategory
 
