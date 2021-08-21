@@ -24,7 +24,7 @@
     <ion-item>
       <ion-icon name="calendar-outline" slot="start"></ion-icon>
       <ion-label>Due Date</ion-label>
-      <ion-datetime [(ngModel)]="itemDueDate" displayFormat="D MMM YYYY H:mm"></ion-datetime>
+      <ion-datetime [(ngModel)]="itemDueDate" displayFormat="D MMM YYYY H:mm" [min]="minDate" [max]="maxDate"></ion-datetime>
     </ion-item>
 
 
@@ -39,6 +39,7 @@
         <ion-label color="secondary">{{tag}}</ion-label>
       </ion-chip>
 
+      <!-- Butang tambah dalam pilihan category :) yang xde func :) -->
       <ion-chip color="primary" outline="true">
         <ion-label color="secondary">new</ion-label>
         <ion-button fill="clear">

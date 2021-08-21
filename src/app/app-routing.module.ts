@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   
@@ -21,10 +22,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/task/task.module').then( m => m.TaskPageModule)
   },
   {
-    path: 'task',
-    loadChildren: () => import('./pages/task/task.module').then( m => m.TaskPageModule)
-  },
-  {
     path: 'aboutus',
     loadChildren: () => import('./pages/aboutus/aboutus.module').then( m => m.AboutusPageModule)
   },
@@ -36,8 +33,13 @@ const routes: Routes = [
     path: 'tutorial',
     loadChildren: () => import('./pages/tutorial/tutorial.module').then( m => m.TutorialModule)
   },
+  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
+  },
 
 ];
+
 
 @NgModule({
   imports: [
