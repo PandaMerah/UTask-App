@@ -25,11 +25,17 @@
 #container a {
   text-decoration: none;
 }
+// ionic nya content di sini ya
+
+
 
 ion-content{
-  --background : #F0F4FD;
+  --background: #000000;
 
   p{
    font-weight: 300;
+  }
+  ion-card{
+    background-color: #101A23;
   }
 }
