@@ -8,6 +8,10 @@ import { Platform } from '@ionic/angular';
 })
 export class TabsService {
 
+  private hideTabBarPages: string[] = [
+    'tutorial',
+  ];
+
   constructor(private router: Router, private platform: Platform) {
     this.platform.ready().then(() => {
       console.log('Core service init');
@@ -23,18 +27,13 @@ export class TabsService {
     });
   }
 
-  private hideTabBarPages: string[] = [
-    'tutorial',
-  ];
-
   private showHideTabs(e: NavigationEnd){
-    id:13
-    url: "/tutorial"
-    urlAfterRedirects:"/tutorial"
+
     const urlArray = e.url.split('/');
     const pageUrl = urlArray[urlArray.length - 1];
     const page = pageUrl.split('?')[0];
     const shouldHide = this.hideTabBarPages.indexOf(page) > -1;
+    console.log(page)
     shouldHide ? this.hideTabs() : this.showTabs()
   }
 
