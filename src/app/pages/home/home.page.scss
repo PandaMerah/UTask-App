@@ -17,7 +17,7 @@
   font-size: 16px;
   line-height: 22px;
 
-  color: #8c8c8c;
+  color: #000000;
 
   margin: 0;
 }
@@ -27,15 +27,34 @@
 }
 // ionic nya content di sini ya
 
+ion-toolbar{
+  background: #654F94;
+}
 
+ion-title{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 ion-content{
   --background: #000000;
 
   p{
-   font-weight: 300;
+   font-weight: bolder;
+
   }
   ion-card{
-    background-color: #101A23;
+    background: #654F94;
+    border-radius: 6px 32px 32px 32px;
+
+  }
+  ion-row{
+    --background-color: #654F94;
+  }
+  ion-item{
+    background-color: #654F94;
+
+  }
+  ion-label{
+    color: black;
   }
 }
