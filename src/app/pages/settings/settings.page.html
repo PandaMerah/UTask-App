@@ -1,39 +1,59 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="font" >Settings</ion-title>
+    <ion-title class="font" align="center">Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <!-- Login/Register Page Goes Here -->
+  <div>
 
-  <div class="profile">
-    <ion-button expand="full">
-      <i><img src="https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/410.svg" width="30"/></i>
-      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
-    </ion-button>
+    <div class="profile">
+      <ion-button id="profile" expand="full" fill="clear" disabled="false">
+      <img src="https://www.w3schools.com/howto/img_avatar.png" width="60"/>
+      <h5><b>PandaMerah</b>
+        <br>View Profile
+      </h5>
+      <ion-icon name="chevron-forward-outline" large></ion-icon>
+      </ion-button>
+    </div>
+
+    <div class="account">
+      <div id="accounts">
+        <ion-label>Accounts</ion-label>
+      </div>
+      <div id="email">
+        <ion-label>Email</ion-label>
+      </div>
+      <div id="email-content">
+        <ion-label>notavailable@pandamerah.tech</ion-label>
+      </div>
+    </div>
+
+    <!-- Settings Start here -->
+    <div class="section">
+      <ion-label class='bold'>App Setting</ion-label>
+      <ion-item>
+        <ion-icon slot="start" name="moon"></ion-icon>
+        <ion-label>Dark Mode</ion-label>
+        <ion-toggle slot="end" (ionChange)='toggleTheme($event)'></ion-toggle>
+      </ion-item>
+    </div>
+
+    <!-- TASK SETTINGS START HERE -->
+    <div class="section">
+      <ion-label class='bold'>Task Setting</ion-label>
+
+      <ion-button expand="full" fill="clear" (click)="confirmationAlert()">
+        <ion-icon slot="start" name="moon"></ion-icon>
+        Clear all tasks
+      </ion-button>
+        
+
+
+    </div>
   </div>
-
-  <!-- Settings Start here -->
-  <div class="section">
-    <ion-label class='bold'>App Setting</ion-label>
-    <ion-item>
-      <ion-icon slot="start" name="moon"></ion-icon>
-      <ion-label>Dark Mode</ion-label>
-      <ion-toggle slot="end" (ionChange)='toggleTheme($event)'></ion-toggle>
-    </ion-item>
-  </div>
-
-  <div class="section">
-    <ion-label class='bold'>Task Setting</ion-label>
-    <ion-item>
-      <ion-icon slot="start" name="moon"></ion-icon>
-      <ion-label>Dark Mode</ion-label>
-      <ion-toggle slot="end" (ionChange)='toggleTheme($event)'></ion-toggle>
-    </ion-item>
-  </div>
-
-  <ion-button expand="block">About Us</ion-button>
+  <!-- <ion-button expand="block" tab="aboutus">About Us</ion-button> -->
 
 </ion-content>

@@ -27,6 +27,22 @@
 
 // Added new fonts *Montserrat,
 @font-face {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/Montserrat-light.ttf');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Montserrat';
     src: url('./assets/fonts/Montserrat-Regular.ttf');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/Montserrat-SemiBold.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/Montserrat-Bold.ttf');
+    font-weight: 400;
 }
