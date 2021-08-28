@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  public kentang:boolean = true;
-  constructor() {}
-
-  toggleTheme(event){
-    if(event.detail.checked){
-      document.body.setAttribute('color-theme', 'dark');
-    }else{
-      document.body.setAttribute('color-theme', 'light');
-
-    }
-  }
-
+  constructor(
+    private lottieSplashScreen: LottieSplashScreen
+  ){}
 }
+  
+  // setTimeout(() => {
+    // this.lottieSplashScreen.hide();
+  // }, 2500)
+  
+
