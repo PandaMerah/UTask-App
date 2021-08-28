@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
 import { TabsService } from './core/tabs.service';
+// import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 // navigation module goes here
 import { HomePageModule } from './pages/home/home.module';
 import { SettingsPageModule } from './pages/settings/settings.module';
