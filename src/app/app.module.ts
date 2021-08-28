@@ -1,3 +1,4 @@
+import { IonicNativePlugin } from '@ionic-native/core';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -5,6 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage-angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
 import { TabsService } from './core/tabs.service';
 // import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 // navigation module goes here
@@ -24,8 +26,10 @@ import { SettingsPageModule } from './pages/settings/settings.module';
     TabsService,
     {provide:
     RouteReuseStrategy,
-    useClass: IonicRouteStrategy},
-
+    useClass: IonicRouteStrategy,
+  },
+  LottieSplashScreen,
+  IonicNativePlugin
 ],
   bootstrap: [AppComponent],
 })

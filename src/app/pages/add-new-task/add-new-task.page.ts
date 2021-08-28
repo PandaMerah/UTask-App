@@ -26,9 +26,9 @@ export class AddNewTaskPage implements OnInit {
    }
 
   ngOnInit() {
-    this.categories.push('work')
+    this.categories.push('kerja')
+    this.categories.push('kerja rumah')
     this.categories.push('personal')
-    this.categories.push('school')
   }
 
   async add(){

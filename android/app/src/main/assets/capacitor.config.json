@@ -1,6 +1,6 @@
 {
 	"appId": "io.ionic.starter",
-	"appName": "testing",
+	"appName": "ReminderApps",
 	"webDir": "www",
 	"bundledWebRuntime": false
 }

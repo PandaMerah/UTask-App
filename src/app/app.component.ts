@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
 import { TabsService } from './core/tabs.service';
 // import { ModalController } from '@ionic/angular';
 // import { AddNewTaskPage } from './pages/add-new-task/add-new-task.page';
@@ -12,7 +13,8 @@ import { TabsService } from './core/tabs.service';
 })
 export class AppComponent {
   
-  constructor(public tabs:TabsService) {}
+  constructor(public tabs:TabsService, private lottieSplashScreen: LottieSplashScreen) {}
+
 
   // Theme Changer Code
   toggleTheme(event){
@@ -25,3 +27,9 @@ export class AppComponent {
   }
 
 }
+  
+  // setTimeout(() => {
+    // this.lottieSplashScreen.hide();
+  // }, 2500)
+  
+

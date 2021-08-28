@@ -21,9 +21,9 @@ export class TaskPage implements OnInit {
   constructor(public modalCtlr:ModalController, public todoService:TodoService) { }
 
   ngOnInit() {
-    this.categories.push('work')
+    this.categories.push('kerja')
+    this.categories.push('kerja sekolah')
     this.categories.push('personal')
-    this.categories.push('school')
 
     this.itemName = this.task.value.itemName
     this.itemDueDate = this.task.value.itemDueDate
