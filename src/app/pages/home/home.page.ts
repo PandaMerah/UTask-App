@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { AlertController, ModalController } from '@ionic/angular';
+import { AlertController, ModalController, Platform } from '@ionic/angular';
+// import { IonicNativePlugin } from '@ionic-native/core'
+// import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 import { AddNewTaskPage } from '../add-new-task/add-new-task.page';
 import { TaskPage } from '../task/task.page';
 import { TodoService } from '../../todo.service';
@@ -12,6 +14,7 @@ import { TodoService } from '../../todo.service';
 export class HomePage {
   
   todoList =[]
+  
   
   today : number = Date.now()
   
@@ -29,9 +32,11 @@ export class HomePage {
     return await modal.present()
   }
 
+
+
   getAllTask(){
     this.todoList = this.todoService.getAllTasks()
-    console.log(this.todoService.getAllTasks());
+    console.log(this.todoList)
   }
 
   delete(key) {

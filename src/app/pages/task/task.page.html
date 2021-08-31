@@ -1,6 +1,6 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>Tambah Tugasan Baru Bro</ion-title>
+    <ion-title>Tambahbaik tugasan anda</ion-title>
     <ion-icon name="close-circle-outline" slot="end" size="large" class="ion-padding" (click)="dismis()"></ion-icon>
   </ion-toolbar>
 
@@ -13,7 +13,7 @@
     </ion-item>
 
     <ion-item>
-      <ion-label>Priority</ion-label>
+      <ion-label>Tahap Kepentingan Tugasan</ion-label>
       <ion-select [(ngModel)]="itemPriority">
       <ion-select-option value="Low">Tugasan Harian</ion-select-option>
       <ion-select-option value="Middle">Penting</ion-select-option>
@@ -30,7 +30,7 @@
 
     <ion-item>
       <ion-icon name="pricetag-outline" slot="start"></ion-icon>
-      <ion-label> Category</ion-label>
+      <ion-label> Kategori</ion-label>
       <span >{{categorySelectedCategory}}</span>
     </ion-item>
 
@@ -38,13 +38,7 @@
       <ion-chip *ngFor="let tag of categories; let i = index" color="secondary" outline="true" (click)="selectCategory(i)">
         <ion-label color="secondary">{{tag}}</ion-label>
       </ion-chip>
-
-      <ion-chip color="primary" outline="true">
-        <ion-label color="secondary">new</ion-label>
-        <ion-button fill="clear">
-          <ion-icon slot="icon-only" name="add-outline"></ion-icon>
-        </ion-button>
-      </ion-chip>
+      
     </ion-item>
 
     <ion-button class="ion-margin" expand="block" (click)="update()">Tambahbaik Tugasan</ion-button>

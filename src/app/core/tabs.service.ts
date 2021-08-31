@@ -33,7 +33,6 @@ export class TabsService {
     const pageUrl = urlArray[urlArray.length - 1];
     const page = pageUrl.split('?')[0];
     const shouldHide = this.hideTabBarPages.indexOf(page) > -1;
-    console.log(page)
     shouldHide ? this.hideTabs() : this.showTabs()
   }
 

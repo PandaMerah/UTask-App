@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { ToastController } from '@ionic/angular';
 import { TodoService } from '../../todo.service';
 
 @Component({
@@ -20,14 +21,14 @@ export class AddNewTaskPage implements OnInit {
   itemCategory
 
 
-  constructor(public modalCtlr: ModalController, public todoService:TodoService) { 
+  constructor(public modalCtlr: ModalController, public todoService:TodoService, public toastController: ToastController) { 
 
    }
 
   ngOnInit() {
-    this.categories.push('work')
+    this.categories.push('kerja')
+    this.categories.push('kerja rumah')
     this.categories.push('personal')
-    this.categories.push('school')
   }
 
   async add(){
@@ -38,6 +39,13 @@ export class AddNewTaskPage implements OnInit {
     if(uid){
       await this.todoService.addTask(uid,this.newTaskObj)
     }else{
+      const toast = await this.toastController.create({
+        color: 'dark',
+        duration: 2000,
+        message: "Can't save empty task",
+        // showCloseButton: true
+      });
+      await toast.present();
       console.log("can't save empty task");
     }
     
