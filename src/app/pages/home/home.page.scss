@@ -1,3 +1,7 @@
+$background1 : #654F94;
+$color1 : #000000;
+
+
 #container {
   text-align: center;
 
@@ -16,20 +20,31 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
 }
+// ionic nya content di sini ya
 
-ion-content{
-  --background : white;
+// ion-content{
+//   --background: #3d3838;
 
+  // ion-toolbar{
+  // --background: "primary";
+  // }
+// ion-content{
+//   --background: linear-gradient(180deg, #423069 36.98%, #050B41 100%);
+// }
+  ion-title{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
   p{
+   font-weight: bolder;
    font-weight: 300;
   }
-}
+  ion-card{
+    // background: #654F94;
+    border-radius: 6px 32px 32px 32px;}
