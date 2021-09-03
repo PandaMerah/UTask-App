@@ -49,7 +49,6 @@ export class AddNewTaskPage implements OnInit {
       console.log("can't save empty task");
     }
     
-    
     this.dismis()
   }
 

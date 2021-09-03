@@ -15,21 +15,5 @@ export class AppComponent {
   
   constructor(public tabs:TabsService, private lottieSplashScreen: LottieSplashScreen) {}
 
-
-  // Theme Changer Code
-  toggleTheme(event){
-    if(event.detail.checked){
-      document.body.setAttribute('color-theme', 'dark');
-    }
-    else{
-      document.body.setAttribute('color-theme', 'light');
-    }
-  }
-
 }
-  
-  // setTimeout(() => {
-    // this.lottieSplashScreen.hide();
-  // }, 2500)
-  
 
