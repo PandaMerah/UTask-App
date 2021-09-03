@@ -10,6 +10,7 @@ export class TabsService {
 
   private hideTabBarPages: string[] = [
     'tutorial',
+    ''
   ];
 
   constructor(private router: Router, private platform: Platform) {
@@ -22,7 +23,7 @@ export class TabsService {
      // A simple subscription that tells us what page we're currently navigating to.
   private navEvents() {
   this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe((e: any) => {
-    console.log(e);
+    console.log('e=',e);
     this.showHideTabs(e);
     });
   }
