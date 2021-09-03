@@ -1,8 +1,7 @@
-import { Component, ViewChild,OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { ModalController } from '@ionic/angular';
 import { TodoService } from '../../todo.service';
-import { MenuController, IonSlides } from '@ionic/angular';
+import { MenuController, IonSlides, ModalController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 
 @Component({

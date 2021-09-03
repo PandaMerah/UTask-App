@@ -1,7 +1,7 @@
-import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
-import { Platform, AlertController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../../todo.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-settings',
@@ -10,7 +10,12 @@ import { TodoService } from '../../todo.service';
 })
 export class SettingsPage implements OnInit {
 
-  constructor(public alertController: AlertController, public todoService:TodoService) {
+  constructor(
+    public alertController: AlertController,
+    public todoService:TodoService,
+    public toastController:ToastController,
+    public router: Router,
+    ) {
 
   }
 
@@ -24,6 +29,10 @@ export class SettingsPage implements OnInit {
       document.body.setAttribute('color-theme', 'light');
       
     }
+  }
+
+  aboutUs(){
+    this.router.navigateByUrl('/aboutus', { replaceUrl: true});
   }
 
   async confirmationAlert(){
@@ -47,6 +56,18 @@ export class SettingsPage implements OnInit {
     ]
     });
     await alert.present();
+  }
+
+  async profile(){
+    const toast = await this.toastController.create({
+      color: 'dark',
+      duration: 2000,
+      message: "Profile System is not yet available to the public",
+      // showCloseButton: true
+    });
+    await toast.present();
+    console.log("can't save empty task");
+
   }
 
 }

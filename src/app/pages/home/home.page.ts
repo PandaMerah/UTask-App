@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController, ModalController, Platform } from '@ionic/angular';
-// import { IonicNativePlugin } from '@ionic-native/core'
-// import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+import { ModalController } from '@ionic/angular';
 import { AddNewTaskPage } from '../add-new-task/add-new-task.page';
 import { TaskPage } from '../task/task.page';
 import { TodoService } from '../../todo.service';
@@ -32,11 +30,20 @@ export class HomePage {
     return await modal.present()
   }
 
-
-
   getAllTask(){
     this.todoList = this.todoService.getAllTasks()
     console.log(this.todoList)
+  }
+
+  refreshTask(event){
+    this.todoList = []
+    this.todoList = this.todoService.getAllTasks()
+    console.log(this.todoList)
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 1000);
   }
 
   delete(key) {
