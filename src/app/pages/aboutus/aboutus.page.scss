@@ -15,19 +15,19 @@ ion-content{
       text-align: center;
       font-family: 'Montserrat'!important;
       font-size: larger;
-      padding-left:16px;
-  
     }
   }
-  ion-text {
+  .ayat {
     p{
       font-family: 'Montserrat'!important;
       font-weight: 300;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
   ion-label{
     b{
-      padding-left:16px;
+      padding-left:10px;
     }
   }
 }
