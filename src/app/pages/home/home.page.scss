@@ -2,49 +2,75 @@ $background1 : #654F94;
 $color1 : #000000;
 
 
-#container {
-  text-align: center;
+// #container {
+//   text-align: center;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-// ionic nya content di sini ya
-
-// ion-content{
-//   --background: #3d3838;
-
-  // ion-toolbar{
-  // --background: "primary";
-  // }
-// ion-content{
-//   --background: linear-gradient(180deg, #423069 36.98%, #050B41 100%);
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 50%;
+//   transform: translateY(-50%);
 // }
-  ion-title{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+// #container strong {
+//   font-size: 20px;
+//   line-height: 26px;
+// }
+
+// #container p {
+//   font-size: 16px;
+//   line-height: 22px;
+//   color: #8c8c8c;
+//   margin: 0;
+// }
+
+// #container a {
+//   text-decoration: none;
+// }
+
+ion-title {
+  font-family: 'Montserrat' !important;
+  font-size: 29px;
+  // margin:0px 0px 0px;
+  padding:0px;
+  p {
+    font-family: 'Montserrat' !important;
+    font-weight: bolder;
+    font-weight: 400;
+    margin:9px 0px 16px 0px;
   }
-  p{
-   font-weight: bolder;
-   font-weight: 300;
+}
+
+ion-card {
+  background: "primary";
+  border-radius: 27px;
+  font-weight: bolder;
+  ion-card-header{
+    ion-card-subtitle{
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+    ion-item{
+      border-radius: 35px;
+    }
   }
-  ion-card{
-    // background: #654F94;
-    border-radius: 6px 32px 32px 32px;}
+  ion-row{
+    margin:0;
+    padding:0;
+    .hydrated{
+      border-radius: 26px;
+    }
+    ion-col{
+      border-radius: 35px;
+      // ion-item {
+      //   // text-align: center;
+      //   // justify-content: center;
+      // }
+    }
+    p{
+      font-family: 'Montserrat' !important;
+      font-weight: bolder;
+      font-weight: 400;
+    }
+  }
+}
