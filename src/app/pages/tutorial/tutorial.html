@@ -10,7 +10,7 @@
   <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager="false">
    
     <!-- FIRST SLIDE START HERE -->
-    <ion-slide>
+    <ion-slide id="main">
       <img src="assets/img/ica-slidebox-img-1.png" class="slide-image" />
       <h2 class="slide-title">
         Welcome to
@@ -35,7 +35,7 @@
 
     </ion-slide>
 <!-- THIRD SLIDE START HERE -->
-    <ion-slide>
+    <ion-slide id="second">
       <img src="assets/img/ica-slidebox-img-3.png" class="slide-image" />
       <h2 class="slide-title">2. Fill your todo details</h2>
       <p>Here, you will need to fill in the details of your task / homework :)</p>
@@ -130,7 +130,7 @@
     </ion-slide>
 
     <!-- FIFTH SLIDE START HERE -->
-    <ion-slide>
+    <ion-slide id="fifth">
       <img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
       <h2 class="slide-title">Ready to start finishing homework?</h2>
       <ion-button fill="clear" (click)="startApp()">

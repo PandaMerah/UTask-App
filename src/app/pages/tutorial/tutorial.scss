@@ -7,12 +7,35 @@ ion-toolbar {
   overflow: hidden;
 }
 
+#main{
+  height: 100%!important;
+  
+}
+
 #first {
   height: 100%!important;
   background-color: aquamarine;
   // * {
   //   height: 100%;
   // }
+}
+
+#second {
+
+}
+
+#third{
+
+
+}
+
+#fourth{
+
+  
+}
+
+#fifth {
+  
 }
 
 .swiper-slide {
@@ -30,9 +53,6 @@ ion-toolbar {
   pointer-events: none;
 }
 
-b {
-  font-weight: 500;
-}
 
 p {
   padding: 0 40px;
@@ -40,7 +60,8 @@ p {
   line-height: 1.5;
   color: var(--ion-color-step-600, #60646b);
 
-  b {
-    color: var(--ion-text-color, #000000);
-  }
+  // b {
+  //   color: var(--ion-text-color, #000000);
+  //   font-weight: 500;
+  //  } 
 }

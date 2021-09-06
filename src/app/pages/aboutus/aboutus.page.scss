@@ -1,0 +1,38 @@
+ion-header{
+  ion-toolbar{
+    ion-title{
+      padding:0px 30px 0px 0px;
+    }
+  }
+}
+
+ion-content{
+
+  .header{
+    b {
+      // text-align: center;
+      display:block;
+      text-align: center;
+      font-family: 'Montserrat'!important;
+      font-size: larger;
+      padding-left:16px;
+  
+    }
+  }
+  ion-text {
+    p{
+      font-family: 'Montserrat'!important;
+      font-weight: 300;
+    }
+  }
+  ion-label{
+    b{
+      padding-left:16px;
+    }
+  }
+}
+
+
+
+
+

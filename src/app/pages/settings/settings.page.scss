@@ -3,60 +3,75 @@
     font-weight: 400;
 }
 
-div{ //TEXT PART START HERE
-    margin-left: 7px;
-    font-family: 'Montserrat' !important;
+ion-content{
+    div{
+        margin-left:7px;
+        font-family: 'Montserrat' !important;
+        .profile{
+            margin:16px 0px 7px 0px;
+            #profile{
+                height:60px;
+                img{
+                    border-radius:50%;
+                    margin-right:auto;
+                }
+                h5{
+                    margin-left:10px;
+                    margin-right: auto;
+                }
+                ion-icon {
+                    --ion-icon-stroke-width: 30px;
+                    margin-left: auto;
+                }
+            }
 
-    .profile{ //PROFILE CSS
-        margin-top: 16px;
-        margin-bottom: 7px;
-        #profile{
-            fill: transparent;
-            height: 60px;
-            
         }
-        img {
-            border-radius: 50%;
-            // align-items: start;
-            margin-right: auto;
+    }
+    ion-list{
+        .list-md{
+            padding-top:0;
+            padding-bottom:0;
         }
-        h2 {
-            margin-left:10px;
-            margin-right: auto;
-            b{
-                font-weight:normal;
+        .header{
+            font-weight: 400;
+        }
+        .email{
+            ion-label{
+                font-weight: bold;
+                p{
+                    font-weight: normal;
+                }
             }
         }
-        ion-icon {
-            --ionicon-stroke-width: 30px;
-            margin-left: auto;
-        }
-    }
-
-    .account {
-        padding-top: 10px;
-        #accounts{
-            margin-top: 5px;
-            margin-bottom: 5px;
-            font-weight: bold;
-            // font-weight: bold;
-        }
-        #email {
-            margin-top:10px;
-            font-weight:normal;
-        }
-        #email-content {
-            font-weight: lighter;
-        }
-    }
-
-    .section{
-        border-bottom: 1px solid grey;
-        padding-top: 1.2em;
-        padding-bottom: 1.2em;
-    }
-
-    .bold{
-        font-weight: bold;
     }
 }
+
+
+
+//     .account {
+//         padding-top: 10px;
+//         #accounts{
+//             margin-top: 5px;
+//             margin-bottom: 5px;
+//             font-weight: bold;
+//             // font-weight: bold;
+//         }
+//         #email {
+//             margin-top:10px;
+//             font-weight:normal;
+//         }
+//         #email-content {
+//             font-weight: lighter;
+//         }
+//     }
+
+//     .section{
+//         border-bottom: 1px solid grey;
+//         padding-top: 1.2em;
+//         padding-bottom: 1.2em;
+//     }
+
+//     .bold{
+//         font-weight: bold;
+//     }
+// }

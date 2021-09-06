@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Tambah Tugasan Baru Bro</ion-title>
+    <ion-title>Add New Task</ion-title>
     <ion-icon name="close-circle-outline" slot="end" size="large" class="ion-padding" (click)="dismis()"></ion-icon>
   </ion-toolbar>
 
@@ -9,15 +9,15 @@
 <ion-content>
   <ion-card class="ion-align-self-center">
     <ion-item>
-      <ion-textarea [(ngModel)]="itemName" placeholder="Masukkan nama tugasan anda"></ion-textarea> 
+      <ion-textarea [(ngModel)]="itemName" placeholder="Add Your Task name"></ion-textarea> 
     </ion-item>
 
     <ion-item>
-      <ion-label>Tahap Kepentingan Tugasan</ion-label>
+      <ion-label>Level of Assignment Importance</ion-label>
       <ion-select [(ngModel)]="itemPriority">
-      <ion-select-option value="Low">Tugasan Harian</ion-select-option>
-      <ion-select-option value="Middle">Penting</ion-select-option>
-      <ion-select-option value="High">Sangat Penting</ion-select-option>
+      <ion-select-option value="Low">Daily</ion-select-option>
+      <ion-select-option value="Middle">Important</ion-select-option>
+      <ion-select-option value="High">Critical</ion-select-option>
       </ion-select>
     </ion-item>
     
@@ -30,7 +30,7 @@
 
     <ion-item>
       <ion-icon name="pricetags" slot="start"></ion-icon>
-      <ion-label> Kategori</ion-label>
+      <ion-label> Category</ion-label>
       <span >{{categorySelectedCategory}}</span>
     </ion-item>
 
@@ -48,7 +48,7 @@
       </ion-chip> -->
     </ion-item>
 
-    <ion-button class="ion-margin" expand="block" (click)="add()">Tambah Tugasan</ion-button>
+    <ion-button class="ion-margin" expand="block" (click)="add()">Add Task</ion-button>
 
   </ion-card>
 </ion-content>

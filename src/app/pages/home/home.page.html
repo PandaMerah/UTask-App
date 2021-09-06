@@ -1,14 +1,14 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="danger" no-border>
-    <ion-title class="ion-margin-top" style="font-weight: 50;font-size: 2em;">Today</ion-title>
-    <p class="ion-margin-left" style="font-weight: 300;" color ="danger">{{today | date:'fullDate'}}</p>
+  <ion-toolbar color="primary" no-border>
+    <ion-title class="ion-margin-top">Today</ion-title>
+    <p class="ion-margin-left"color ="danger">{{today | date:'fullDate'}}</p>
     <ion-button fill="clear" expand="block" size="small" slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="light">
 
   <ion-refresher slot="fixed" (ionRefresh)="refreshTask($event)">
     <ion-refresher-content>
@@ -19,9 +19,9 @@
     </ion-refresher-content>
   </ion-refresher>
 
-  <ion-card *ngFor="let item of todoList; let i=index" class="ion-margin">
+  <ion-card class="ion-margin" color="tertiary" *ngFor="let item of todoList; let i=index">
       <ion-card-header>
-        <ion-card-subtitle [style.color]="item.value.itemPriority === 'High' ? 'red' : (item.value.itemPriority === 'Low' ? 'green' : 'orange')">
+        <ion-card-subtitle [style.color]="item.value.itemPriority === 'High' ? 'red' : (item.value.itemPriority === 'Low' ? 'aquamarine' : 'orange')">
            {{item.value.itemCategory}}
         </ion-card-subtitle>
 
@@ -40,15 +40,19 @@
 
       <ion-row>
 
-        <ion-item button (click)="update(item)">
-          <ion-icon name="create-outline"></ion-icon>
-          <p>Update</p>
-        </ion-item>
+        <ion-col>
+          <ion-item button (click)="update(item)">
+            <ion-icon name="create-outline" ></ion-icon> 
+            <p>Update</p>
+          </ion-item>
+        </ion-col>
 
-        <ion-item button (click)="delete(item.key)">
-          <ion-icon name="trash-outline"></ion-icon>
-          <p>Delete</p>
-        </ion-item>
+        <ion-col>
+          <ion-item button (click)="delete(item.key)">
+            <ion-icon name="trash-outline"></ion-icon>
+            <p>Delete</p>
+          </ion-item>
+        </ion-col>
       </ion-row>
 
 

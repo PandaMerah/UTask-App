@@ -1,10 +1,10 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title class="font" align="center">Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="light">
 
   <div>
 
@@ -20,16 +20,15 @@
 
     <ion-list>
 
-      <ion-list-header class="header">Accounts</ion-list-header>
+      <ion-list-header class="header" color="light">Accounts</ion-list-header>
 
-      <ion-item text-wrap>
+      <ion-item class="email" text-wrap>
         <ion-label>Email
           <p>notavailable@pandamerah.tech</p>
         </ion-label>
-        
       </ion-item>
 
-      <ion-list-header class="header">App Settings</ion-list-header>
+      <ion-list-header class="header" color="light">App Settings</ion-list-header>
 
       <ion-item>
         <ion-icon slot="start" name="moon"></ion-icon>
@@ -38,15 +37,15 @@
       </ion-item>
 
       <ion-item button (click)="aboutUs()">
-        <ion-icon name="people-outline"></ion-icon>
+        <ion-icon slot="start" name="people-outline"></ion-icon>
         <ion-label>About Us</ion-label>
         <ion-ripple-effect></ion-ripple-effect>
       </ion-item>
 
-      <ion-list-header class="header">Task Settings</ion-list-header>
+      <ion-list-header class="header" color="light">Task Settings</ion-list-header>
 
       <ion-item button (click)="confirmationAlert()">
-        <ion-icon name="trash-outline"></ion-icon>
+        <ion-icon slot="start" name="trash-outline"></ion-icon>
         <ion-label>Clear all tasks</ion-label>
         <ion-ripple-effect></ion-ripple-effect>
       </ion-item>

@@ -1,23 +1,23 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>Tambahbaik tugasan anda</ion-title>
+    <ion-title>Update Your Task</ion-title>
     <ion-icon name="close-circle-outline" slot="end" size="large" class="ion-padding" (click)="dismis()"></ion-icon>
   </ion-toolbar>
 
 </ion-header>
 
-<ion-content>
+<ion-content style='border-radius: 15px, 15px, 15px, 15px ;'>
   <ion-card class="ion-align-self-center">
     <ion-item>
-      <ion-textarea [(ngModel)]="itemName" placeholder="Masukkan nama tugasan anda"></ion-textarea> 
+      <ion-textarea [(ngModel)]="itemName" placeholder="Add Your Task name"></ion-textarea> 
     </ion-item>
 
     <ion-item>
-      <ion-label>Tahap Kepentingan Tugasan</ion-label>
+      <ion-label>Level of Assignment Importance</ion-label>
       <ion-select [(ngModel)]="itemPriority">
-      <ion-select-option value="Low">Tugasan Harian</ion-select-option>
-      <ion-select-option value="Middle">Penting</ion-select-option>
-      <ion-select-option value="High">Sangat Penting</ion-select-option>
+      <ion-select-option value="Low">Daily</ion-select-option>
+      <ion-select-option value="Middle">Important</ion-select-option>
+      <ion-select-option value="High">Critical</ion-select-option>
       </ion-select>
     </ion-item>
     
@@ -30,7 +30,7 @@
 
     <ion-item>
       <ion-icon name="pricetag-outline" slot="start"></ion-icon>
-      <ion-label> Kategori</ion-label>
+      <ion-label> Category</ion-label>
       <span >{{categorySelectedCategory}}</span>
     </ion-item>
 
@@ -41,7 +41,7 @@
       
     </ion-item>
 
-    <ion-button class="ion-margin" expand="block" (click)="update()">Tambahbaik Tugasan</ion-button>
+    <ion-button class="ion-margin" expand="block" (click)="update()">Update Task</ion-button>
 
   </ion-card>
 
