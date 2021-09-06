@@ -11,7 +11,7 @@
     <div class="profile">
       <ion-button id="profile" expand="full" fill="clear" disabled="false" (click)="profile()">
         <img src="https://www.w3schools.com/howto/img_avatar.png" width="60"/>
-        <h5><b>PandaMerah</b>
+        <h5><b>User</b>
           <br>View Profile
         </h5>
         <ion-icon name="chevron-forward-outline" large></ion-icon>
@@ -22,7 +22,7 @@
 
       <ion-list-header class="header" color="light">Accounts</ion-list-header>
 
-      <ion-item class="email" text-wrap>
+      <ion-item color="light" class="email" text-wrap>
         <ion-label>Email
           <p>notavailable@pandamerah.tech</p>
         </ion-label>
@@ -30,13 +30,13 @@
 
       <ion-list-header class="header" color="light">App Settings</ion-list-header>
 
-      <ion-item>
+      <ion-item color="light">
         <ion-icon slot="start" name="moon"></ion-icon>
         <ion-label>Dark Mode</ion-label>
         <ion-toggle slot="end" (ionChange)='toggleTheme($event)'></ion-toggle>
       </ion-item>
 
-      <ion-item button (click)="aboutUs()">
+      <ion-item button color="light" (click)="aboutUs()">
         <ion-icon slot="start" name="people-outline"></ion-icon>
         <ion-label>About Us</ion-label>
         <ion-ripple-effect></ion-ripple-effect>
@@ -44,7 +44,7 @@
 
       <ion-list-header class="header" color="light">Task Settings</ion-list-header>
 
-      <ion-item button (click)="confirmationAlert()">
+      <ion-item button color="light" (click)="confirmationAlert()">
         <ion-icon slot="start" name="trash-outline"></ion-icon>
         <ion-label>Clear all tasks</ion-label>
         <ion-ripple-effect></ion-ripple-effect>

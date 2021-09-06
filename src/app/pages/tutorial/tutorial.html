@@ -1,137 +1,53 @@
 <ion-header no-border>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="end">
-      <ion-button color='primary' (click)="startApp()" [hidden]="!showSkip">Skip</ion-button>
+      <ion-button color='light' (click)="startApp()" [hidden]="!showSkip">Skip</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen="true" class="no-scroll">
-  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager="false">
+<ion-content color="light" fullscreen="true" class="no-scroll">
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager="false" class="no-scroll">
    
     <!-- FIRST SLIDE START HERE -->
     <ion-slide id="main">
-      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image" />
+      <img src="../../../assets/1.png" class="slide-image" />
       <h2 class="slide-title">
         Welcome to
-        <b>Worktask Notification</b>
+        <b>UTask Application</b>
       </h2>
       <p>
-        This is an application to remind you on <b>your homework</b> or <b>your task</b> that you need to complete within certain time period.
+        This is an application to remind you on <b>your homework</b> or <b>your task</b> that you need to complete within certain time period.<br>
+        Here's the guide on how to use this app.
       </p>
     </ion-slide>
 
   <!-- SECOND SLIDE START HERE -->
     <ion-slide id="first">
-      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image" />
+      <img src="../../../assets/2.png" class="slide-image" />
       <h2 class="slide-title">1. Add a new task</h2>
-      <p>Firstly, click the blue (PLUS) button on your botttom right of your screen</p>
-      <!-- Component for Slide 1 -->
-      <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed"> 
-        <ion-fab-button (click)='slides.slideNext()'>
-          <ion-icon name="add"></ion-icon>
-        </ion-fab-button>
-      </ion-fab> -->
-
+      <p>Firstly, click the blue (PLUS) button on your botttom right of your screen to open up the add task menu.</p>
     </ion-slide>
+
 <!-- THIRD SLIDE START HERE -->
     <ion-slide id="second">
-      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image" />
+      <img src="../../../assets/3.png" class="slide-image" />
       <h2 class="slide-title">2. Fill your todo details</h2>
-      <p>Here, you will need to fill in the details of your task / homework :)</p>
-      <!-- Component for Slide 3 -->
-      <!-- <ion-card class="ion-align-self-center">
-        <ion-item>
-          <ion-textarea [(ngModel)]="itemNameTutorial" placeholder="Masukkan nama tugasan anda"></ion-textarea> 
-        </ion-item>
-    
-        <ion-item>
-          <ion-label>Priority</ion-label>
-          <ion-select [(ngModel)]="itemPriorityTutorial">
-          <ion-select-option value="Low">Tugasan Harian</ion-select-option>
-          <ion-select-option value="Middle">Penting</ion-select-option>
-          <ion-select-option value="High">Sangat Penting</ion-select-option>
-          </ion-select>
-        </ion-item>
-        
-        <ion-item>
-          <ion-icon name="calendar-outline" slot="start"></ion-icon>
-          <ion-label>Due Date</ion-label>
-          <ion-datetime [(ngModel)]="itemDueDateTutorial" displayFormat="D MMM YYYY H:mm" [min]="minDate" [max]="maxDate"></ion-datetime>
-        </ion-item>
-    
-        <ion-item>
-          <ion-icon name="pricetag-outline" slot="start"></ion-icon>
-          <ion-label> Category</ion-label>
-          <span >{{categorySelectedCategory}}</span>
-        </ion-item>
-    
-        <ion-item>
-          <ion-chip *ngFor="let tag of categories; let i = index" color="secondary" outline="true" (click)="selectCategory(i)">
-            <ion-label color="secondary">{{tag}}</ion-label>
-          </ion-chip>
-    
-          <ion-chip color="primary" outline="true">
-            <ion-label color="secondary">new</ion-label>
-            <ion-button fill="clear">
-              <ion-icon slot="icon-only" name="add-outline"></ion-icon>
-            </ion-button>
-          </ion-chip>
-        </ion-item>
-    
-        <ion-button class="ion-margin" expand="block" (click)="addTutorial()">Tambah Tugasan</ion-button> 
-      </ion-card>-->
-      
+      <p>Here, you will need to fill in the details of your task or your homework.</p>      
     </ion-slide>
 
 
     <!-- FORTH SLIDE START HERE -->
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image" />
-      <h2 class="slide-title">
-        Welcome to
-        <b>NoMoDueDate</b>
-      </h2>
-      <p>
-        This is an application to remind you on <b>your homework</b> or <b>your task</b> that you need to complete within certain time period.
-      </p>
-      <!-- Component for slide four -->
-      <!-- <ion-card-header>
-        <ion-card-subtitle [style.color]="item.value.itemPriority === 'High' ? 'red' : (item.value.itemPriority === 'Low' ? 'green' : 'orange')">
-         
-        </ion-card-subtitle>
-
-        <ion-item>
-          <ion-icon *ngIf="item.value.itemPriority === 'High' " color="danger" size="small" name= "ellipse"></ion-icon>
-          <ion-icon *ngIf="item.value.itemPriority === 'Middle' " color="warning" size="small" name= "ellipse"></ion-icon>
-          <ion-icon *ngIf="item.value.itemPriority === 'Low' " color="success" size="small" name= "ellipse"></ion-icon>
-
-          <ion-label></ion-label>
-        </ion-item>
-      </ion-card-header>
-
-      <ion-card-content>
-        <ion-label >Due </ion-label>
-      </ion-card-content>
-
-      <ion-row>
-
-        <ion-item button (click)="slides.slideNext()">
-          <ion-icon name="create-outline"></ion-icon>
-          <p>Update</p>
-        </ion-item>
-
-        <ion-item button (click)="slides.slideNext()">
-          <ion-icon name="trash-outline"></ion-icon>
-          <p>Cancel</p>
-        </ion-item>
-      </ion-row> -->
-
+      <img src="../../../assets/4.png" class="slide-image" />
+      <h2 class="slide-title">3. Tadaaa... Your task is recorded</h2>
+      <p>Once yout task has been recorded, you can start do your task and when you are done,<br>
+      you can just click the delete button</p>
     </ion-slide>
 
     <!-- FIFTH SLIDE START HERE -->
     <ion-slide id="fifth">
-      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
+      <img src="../../../assets/logo.jpeg" class="slide-image" />
       <h2 class="slide-title">Ready to start finishing homework?</h2>
       <ion-button fill="clear" (click)="startApp()">
         Lets Go!!
